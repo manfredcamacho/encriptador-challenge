@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Encriptador</h1>
+      </header>
+      <main>
+        <div class="encryption-form">
+          <textarea
+            name="text-to-encrypt"
+            class="text-to-encrypt"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese el texto aqui"
+          ></textarea>
+          <p class="info">
+            <span class="icon"><img src="img/warning.svg" /> </span> Sol&oacute;
+            letras min&uacute;sculas y sin acentos.
+          </p>
+          <button type="button" class="primary-btn">Encriptar</button>
+          <button type="button" class="secondary-btn">Desencriptar</button>
+        </div>
+        <div class="result">
+          <h2>Ning&uacute;n mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+      </main>
+      <footer>
+        <p>Creado por Manfred Camacho</p>
+      </footer>
+    </div>
+  </body>
+</html>
