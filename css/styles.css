@@ -58,11 +58,16 @@ body {
     color: var(--dark-blue-300);
     font-size: 3rem;
     line-height: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   main {
     .encryption-form {
       width: 100%;
+      margin-bottom: 2rem;
       .text-to-encrypt {
         background-color: var(--light-blue-100);
         color: var(--dark-blue-300);
@@ -91,6 +96,16 @@ body {
           display: flex;
           margin-right: 0.5rem;
         }
+      }
+
+      .buttons-wrapper {
+        @media (min-width: 768px) {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
       }
     }
 
