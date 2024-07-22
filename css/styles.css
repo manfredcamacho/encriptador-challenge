@@ -92,41 +92,11 @@ body {
           margin-right: 0.5rem;
         }
       }
-
-      .primary-btn {
-        background-color: var(--dark-blue-300);
-        color: var(--white);
-        font-size: 1rem;
-        padding: 1rem 2rem;
-        border-radius: 1.5rem;
-        cursor: pointer;
-        margin-top: 1rem;
-        width: 100%;
-      }
-
-      .primary-btn:hover {
-        background-color: var(--dark-blue-400);
-      }
-
-      .secondary-btn {
-        background-color: var(--light-blue-100);
-        color: var(--dark-blue-400);
-        font-size: 1rem;
-        padding: 1rem 2rem;
-        border: 1px solid var(--dark-blue-400);
-        border-radius: 1.5rem;
-        cursor: pointer;
-        margin-top: 1rem;
-        width: 100%;
-      }
-
-      .secondary-btn:hover {
-        background-color: var(--light-blue-200);
-      }
     }
 
     .result {
       background-color: var(--white);
+      color: var(--gray-400);
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -135,11 +105,52 @@ body {
       padding: 2rem;
       width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      p {
-        font-size: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+      .default-wrapper {
+        h2 {
+          color: var(--gray-500);
+        }
+        p {
+          padding: 0 2rem;
+        }
       }
+      .message-wrapper {
+        display: none;
+        font-size: 1.5rem;
+        .secondary-btn {
+          background-color: var(--white);
+        }
+      }
+    }
+
+    .primary-btn {
+      background-color: var(--dark-blue-300);
+      color: var(--white);
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .primary-btn:hover {
+      background-color: var(--dark-blue-400);
+    }
+
+    .secondary-btn {
+      background-color: var(--light-blue-100);
+      color: var(--dark-blue-400);
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border: 1px solid var(--dark-blue-400);
+      border-radius: 1.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .secondary-btn:hover {
+      background-color: var(--light-blue-200);
     }
   }
 
