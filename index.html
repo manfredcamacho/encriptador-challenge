@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,34 +15,38 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1>Encriptador</h1>
-      </header>
       <main>
-        <div class="encryption-form">
-          <textarea
-            name="text-to-encrypt"
-            class="text-to-encrypt"
-            cols="30"
-            rows="10"
-            placeholder="Ingrese el texto aqui"
-          ></textarea>
-          <p class="info">
-            <span class="icon"><img src="img/warning.svg" /> </span> Sol&oacute;
-            letras min&uacute;sculas y sin acentos.
-          </p>
-          <div class="buttons-wrapper">
-            <button type="button" class="primary-btn">Encriptar</button>
-            <button type="button" class="secondary-btn">Desencriptar</button>
+        <div class="content">
+          <header>
+            <h1>Encriptador</h1>
+          </header>
+          <div class="encryption-form">
+            <div class="text-wrapper">
+              <textarea
+                name="text-to-encrypt"
+                placeholder="Ingrese el texto aqui"
+              ></textarea>
+              <p class="info">
+                <span class="icon"><img src="img/warning.svg" /> </span>
+                Sol&oacute; letras min&uacute;sculas y sin acentos.
+              </p>
+            </div>
+            <div class="buttons-wrapper">
+              <button type="button" class="primary-btn">Encriptar</button>
+              <button type="button" class="secondary-btn">Desencriptar</button>
+            </div>
           </div>
         </div>
-        <div class="result">
+        <div class="sidebar">
           <div class="default-wrapper">
+            <div class="illustration">
+              <img src="img/illustration.svg" alt="No hay mensajes" />
+            </div>
             <h2>Ning&uacute;n mensaje fue encontrado</h2>
             <p>Ingresa el texto que desees encriptar o desencriptar.</p>
           </div>
           <div class="message-wrapper">
-            <p class="message">Texto encriptado</p>
+            <div class="message"><p>Texto encriptado</p></div>
             <button type="button" class="secondary-btn">Copiar</button>
           </div>
         </div>

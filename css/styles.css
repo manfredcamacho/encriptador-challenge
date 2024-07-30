@@ -26,6 +26,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -34,6 +35,29 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
 /* Global Styles */
@@ -49,88 +73,112 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
   margin: 0 auto;
-  padding: 0 1rem;
-  header h1 {
-    font-weight: var(--bold);
-    color: var(--dark-blue-300);
-    font-size: 3rem;
-    line-height: 1.5rem;
-
-    @media (min-width: 768px) {
-      font-size: 2rem;
-    }
-  }
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
 
   main {
-    .encryption-form {
+    flex-grow: 1;
+    display: flex;
+    margin-top: 2.5rem;
+    .content {
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      margin-bottom: 2rem;
-      .text-to-encrypt {
-        background-color: var(--light-blue-100);
-        color: var(--dark-blue-300);
-        font-size: 2rem;
-        font-weight: var(--regular);
-        border: 0;
-        margin-top: 3.5rem;
-        margin-bottom: 1rem;
-        width: 100%;
-        height: 40vh;
-      }
-      .text-to-encrypt:focus {
-        outline: none;
-      }
 
-      .text-to-encrypt::placeholder {
+      header h1 {
         color: var(--dark-blue-300);
+        font-weight: var(--bold);
+        font-size: 3rem;
       }
-
-      .info {
+      .encryption-form {
+        flex-grow: 1;
         display: flex;
-        width: 100%;
-        color: var(--gray-400);
-        font-size: 0.75rem;
-        .icon {
-          display: flex;
-          margin-right: 0.5rem;
-        }
-      }
+        flex-direction: column;
+        margin: 0 5rem;
+        padding-top: 5rem;
 
-      .buttons-wrapper {
-        @media (min-width: 768px) {
+        .text-wrapper {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 1rem;
+          gap: 1rem;
+
+          textarea {
+            flex-grow: 1;
+            background-color: var(--light-blue-100);
+            color: var(--dark-blue-300);
+            font-family: "Inter", sans-serif;
+            font-size: 2rem;
+            font-weight: var(--regular);
+            border: 0;
+            width: 100%;
+          }
+
+          textarea:focus {
+            outline: none;
+          }
+
+          textarea::placeholder {
+            color: var(--dark-blue-300);
+          }
+
+          .info {
+            display: flex;
+            width: 100%;
+            color: var(--gray-400);
+            font-size: 0.75rem;
+
+            .icon {
+              display: flex;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+        .buttons-wrapper {
           display: flex;
           gap: 1rem;
+          padding-bottom: 2rem;
         }
-      }
-
-      @media (min-width: 1024px) {
       }
     }
 
-    .result {
+    .sidebar {
       background-color: var(--white);
       color: var(--gray-400);
       display: flex;
       flex-direction: column;
       text-align: center;
       border-radius: 1.5rem;
-      margin: 1rem auto;
       padding: 2rem;
-      width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 25rem;
+      margin: 0 auto;
+      justify-content: center;
+
       .default-wrapper {
+        .illustration {
+          margin: 1rem auto;
+        }
         h2 {
           color: var(--gray-500);
-        }
-        p {
-          padding: 0 2rem;
+          margin: 1rem auto;
         }
       }
+
       .message-wrapper {
         display: none;
+        flex-direction: column;
         font-size: 1.5rem;
+        height: 100%;
+        text-align: left;
+        .message {
+          flex-grow: 1;
+        }
         .secondary-btn {
           background-color: var(--white);
         }
@@ -144,7 +192,6 @@ body {
       padding: 1rem 2rem;
       border-radius: 1.5rem;
       cursor: pointer;
-      margin-top: 1rem;
       width: 100%;
     }
 
@@ -160,21 +207,22 @@ body {
       border: 1px solid var(--dark-blue-400);
       border-radius: 1.5rem;
       cursor: pointer;
-      margin-top: 1rem;
       width: 100%;
     }
 
     .secondary-btn:hover {
       background-color: var(--light-blue-200);
     }
+
+    .primary-btn,
+    .secondary-btn {
+      padding: 1.5rem;
+    }
   }
 
   footer {
     display: flex;
-    text-align: center;
-    margin: 1rem auto;
-    p {
-      width: 100%;
-    }
+    justify-content: center;
+    margin: 2.5rem auto;
   }
 }
