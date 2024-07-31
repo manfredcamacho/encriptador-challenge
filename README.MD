@@ -6,6 +6,17 @@ This project is a web application that allows you to encrypt and decrypt text me
 
 ## Preview
 
+### Desktop
+<center><img src="preview/desktop.png" alt="Desktop version" width="600"/></center>
+
+<center><img src="preview/desktop-2.png" alt="Desktop version" width="600"/></center>
+
+### Tablet
+<center><img src="preview/iPad-Mini.png" alt="Tablet version" width="600"/></center>
+
+### Mobile
+<center><img src="preview/iPhone-SE.png" alt="Mobile version" width="600"/></center>
+
 ## Features
 
 - **Message Encryption:** Converts plain text into encrypted text.
