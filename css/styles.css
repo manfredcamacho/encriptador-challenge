@@ -14,6 +14,7 @@
   --gray-300: #868e96;
   --gray-400: #495057;
   --gray-500: #343a40;
+  --info-icon-gray: #67808e;
   --white: #fff;
   --black: #000;
   --light: 300;
@@ -123,7 +124,6 @@ body {
 
         @media (max-width: 768px) {
           margin: 0;
-
           min-height: 600px;
         }
 
@@ -143,7 +143,14 @@ body {
             font-weight: var(--regular);
             border: 0;
             width: 100%;
-            field-sizing: content;
+            resize: none;
+            @media (max-width: 768px) {
+              field-sizing: content;
+            }
+
+            &.error {
+              border: 1px solid red;
+            }
           }
 
           textarea:focus {
@@ -164,6 +171,14 @@ body {
           .icon {
             display: flex;
             margin-right: 0.5rem;
+            color: var(--info-icon-gray);
+          }
+
+          &.error {
+            color: red;
+            .icon {
+              color: red;
+            }
           }
         }
         .buttons-wrapper {
@@ -189,9 +204,11 @@ body {
       width: 25rem;
       margin: 0 auto;
       justify-content: center;
+      max-height: 85vh;
 
       @media (max-width: 768px) {
         width: 100%;
+        max-height: none;
       }
 
       .default-wrapper {
@@ -208,17 +225,28 @@ body {
       }
 
       .message-wrapper {
-        display: none;
+        display: flex;
         flex-direction: column;
+        gap: 2rem;
         font-size: 1.5rem;
         height: 100%;
         text-align: left;
         .message {
           flex-grow: 1;
+          word-break: break-word;
+          overflow-y: scroll;
+
+          @media (max-width: 768px) {
+            overflow-y: unset;
+          }
         }
         .secondary-btn {
           background-color: var(--white);
         }
+      }
+
+      .hide {
+        display: none;
       }
     }
 
